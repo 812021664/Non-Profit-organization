@@ -1,114 +1,231 @@
-# Kindred Giving
+<div align="center">
 
-A full-stack donation intelligence workspace for nonprofit teams. Kindred combines a responsive React application with a Spring Boot API and integrates the original [Non-Profit-organization](https://github.com/812021664/Non-Profit-organization) donor, category, donation, and reporting workflows.
+<img src="public/logo.svg" alt="Kindred Giving logo" width="88" />
 
-![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=111) ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5-6DB33F?style=flat-square&logo=springboot&logoColor=white) ![Java](https://img.shields.io/badge/Java-17-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+<h1>Kindred Giving</h1>
+<h3>Turn every contribution into lasting community impact.</h3>
 
-## Highlights
+<p>
+Kindred is a full-stack donation intelligence workspace that helps nonprofit teams understand their donors, grow campaigns, communicate with supporters, and make every gift count.
+</p>
 
-- **Real-time command center** with current-period KPIs, 12-month revenue, campaign pacing, recent gifts, donor tiers, and activity.
-- **Donor CRM** with search, multi-filter views, pagination, consent state, lifetime giving, gift history, add-donor workflow, and CSV export.
-- **Donation tracking** with statuses, channels, payment methods, campaign attribution, receipt details, summaries, and filtered exports.
-- **Campaign management** with goals, funding progress, supporter counts, timelines, filters, and campaign creation.
-- **Advanced analytics** with revenue/gift volume, channel mix, campaign performance, donor loyalty, gift bands, retention, and period comparisons.
-- **Communications** with reusable templates, audience segmentation, consent-aware recipient counts, preview, send history, and personalization tokens.
-- **Reports and exports** with giving, donor, campaign, and finance views in CSV, JSON, and print-to-PDF formats.
-- **Giving Assistant** with an on-device data question engine and optional secure backend endpoint.
-- **Workspace settings** for organization details, access roles, integrations, security visibility, notifications, backups, and demo reset.
-- **Responsive WCAG-minded UI** with keyboard-visible focus, semantic tables/forms, accessible dialogs, reduced visual density on mobile, and live status messaging.
-- **Integrated Spring Boot API** with H2 development persistence, PostgreSQL support, Flyway migrations, validation, CORS, health checks, and structured errors.
-- **Bidirectional synchronization** with automatic local fallback, API status in the shell, write-through forms, and safe retry.
-- **Legacy compatibility routes** for add donor, add category-based donation, per-donor totals, and grand-total reports.
-- **Route-level code splitting** and production chunking for the chart and vendor libraries.
+<p>
+  <a href="https://eloquent-puppy-38d03f.netlify.app" target="_blank" rel="noopener noreferrer">
+    <img alt="Launch live Kindred Giving demo" src="https://img.shields.io/badge/Live_Demo-Explore%20Kindred-00C98A?style=for-the-badge&logo=netlify&logoColor=white" />
+  </a>
+  <a href="https://github.com/812021664/Non-Profit-organization" target="_blank" rel="noopener noreferrer">
+    <img alt="View Kindred Giving source on GitHub" src="https://img.shields.io/badge/GitHub-View_Source-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
 
-## Quick Start
+<p>
+  <a href="https://github.com/812021664/Non-Profit-organization/stargazers"><img src="https://img.shields.io/github/stars/812021664/Non-Profit-organization?style=for-the-badge&label=Stars&logo=github" alt="GitHub stars" /></a>
+  <a href="https://github.com/812021664/Non-Profit-organization/network/members"><img src="https://img.shields.io/github/forks/812021664/Non-Profit-organization?style=for-the-badge&label=Forks&logo=github" alt="GitHub forks" /></a>
+  <img src="https://img.shields.io/github/last-commit/812021664/Non-Profit-organization?style=for-the-badge&label=Last%20Commit&logo=github" alt="Last commit" />
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=111" alt="React 18" />
+  <img src="https://img.shields.io/badge/Spring_Boot-3.5-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot 3.5" />
+  <img src="https://img.shields.io/badge/TypeScript-Strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="Strict TypeScript" />
+</p>
 
-### Requirements
+</div>
 
-- Node.js **20+**
+---
+
+## See Kindred in action
+
+[![Kindred Giving dashboard](docs/images/dashboard.png)](https://eloquent-puppy-38d03f.netlify.app)
+
+> **Live demo:** [eloquent-puppy-38d03f.netlify.app](https://eloquent-puppy-38d03f.netlify.app)
+>
+> The Netlify build runs as the frontend demo. It uses browser persistence when the Spring API is not connected.
+
+## The problem Kindred solves
+
+Nonprofit teams often have donor records, gifts, campaigns, reports, and messages spread across disconnected tools. Kindred brings those relationships into one calm, visual workspace—so teams spend less time reconciling data and more time building trust.
+
+| Mission need | How Kindred helps |
+| :--- | :--- |
+| **Know what is happening** | Live KPIs, recent gifts, campaign pacing, activity, and trend comparisons |
+| **Understand supporters** | Searchable donor CRM, lifetime value, consent, relationship tiers, and gift history |
+| **Grow campaigns** | Goals, progress, timelines, donor counts, campaign creation, and performance views |
+| **Act on insight** | Retention signals, giving-channel analysis, recommended outreach, and a Giving Assistant |
+| **Report with confidence** | Filter-aware CSV, JSON, print, and PDF-ready exports |
+| **Work securely** | Validation, Flyway migrations, CORS controls, health checks, and local offline fallback |
+
+## Product highlights
+
+### A command center built for decisions
+
+- Current-month revenue, average gift, active donors, retention, and period-over-period movement
+- Twelve-month fundraising trend with completed-gift volume
+- Campaign progress, recent donations, donor tiers, and organization activity in one view
+
+### Relationships, not rows
+
+- Fast donor search across names, email, locations, and tags
+- Active, lapsed, and new relationship segmentation
+- Lifetime giving, average gift, recent history, consent, and internal notes
+- One-click CSV export for operational workflows
+
+### Campaigns with a clear pulse
+
+- Funding goals, raised totals, donor counts, dates, and campaign status
+- Visual progress and performance comparisons
+- Fast campaign creation with realistic validation
+
+### Analytics that point to action
+
+- Revenue and gift-volume trends
+- Channel mix, donor loyalty, gift-size distribution, and retention
+- Evidence-based insights for re-engagement and recurring giving
+
+### Communication without the busywork
+
+- Reusable impact, invitation, and monthly digest templates
+- Consent-aware audience sizing
+- Live preview, personalization tokens, and send history
+
+### Reporting that travels
+
+- Giving, donor, campaign, and finance report previews
+- CSV for spreadsheets
+- JSON for engineering and migrations
+- Print/PDF for leadership and board meetings
+
+### A privacy-minded Giving Assistant
+
+- Answers common questions from the workspace data
+- Works locally in the browser without exposing a model-provider secret
+- Supports an optional authenticated backend endpoint for hosted AI
+
+---
+
+## Explore more of the product
+
+<table>
+<tr>
+<td width="50%">
+
+### Analytics
+
+[![Kindred analytics](docs/images/analytics.png)](https://eloquent-puppy-38d03f.netlify.app/analytics)
+
+Revenue, channels, campaigns, loyalty, and retention in one decision-ready view.
+
+</td>
+<td width="50%">
+
+### Giving Assistant
+
+[![Kindred Giving Assistant](docs/images/assistant.png)](https://eloquent-puppy-38d03f.netlify.app/assistant)
+
+Ask grounded questions about momentum, donor behavior, and campaign health.
+
+</td>
+</tr>
+</table>
+
+## Technology
+
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| Frontend | React 18, TypeScript, Vite | Responsive application and route-level code splitting |
+| Styling | Tailwind CSS, custom design tokens | Cinematic dark theme, glass UI, accessibility states |
+| State | Zustand | Predictable domain state with browser persistence |
+| Charts | Recharts | Responsive fundraising and donor visualizations |
+| API | Spring Boot 3.5, Java 17 | Validated REST endpoints and domain synchronization |
+| Persistence | Spring Data JPA, H2, PostgreSQL | Development and production-ready relational storage |
+| Migrations | Flyway | Versioned, repeatable database schema |
+| HTTP | Axios | Typed API access, timeout handling, and auth interceptor |
+| Testing | Vitest, Spring MockMvc | Frontend units and backend integration flows |
+| CI/CD | GitHub Actions | Type, lint, test, audit, and production builds |
+
+## Architecture
+
+```mermaid
+flowchart LR
+    U[Donor or team member] --> UI[React + TypeScript workspace]
+    UI -->|Axios /api| API[Spring Boot REST API]
+    UI -. API unavailable .> LOCAL[(Browser persistence)]
+    API --> DB[(H2 or PostgreSQL)]
+    API --> LEGACY[Legacy-compatible workflows]
+    API --> FLYWAY[Flyway migrations]
+```
+
+Kindred synchronizes the browser workspace with the API when connected. Donor, donation, and campaign forms write through to the server. If the API is unavailable, work remains in the browser and the interface clearly switches to offline mode.
+
+## Quick start
+
+### Prerequisites
+
+- [Node.js 20+](https://nodejs.org/)
 - npm 10+
-- JDK **17+** for the integrated API
+- [JDK 17+](https://adoptium.net/) for the API
 
-> Node 20 is the supported baseline. The toolchain is security-audited with zero known npm vulnerabilities at the time of delivery.
-
-### Install and Run
+### Run the complete application
 
 ```bash
+git clone https://github.com/812021664/Non-Profit-organization.git
+cd Non-Profit-organization
 npm install
 npm run dev:full
 ```
 
-Open **http://localhost:5173**. The command starts the API, waits for its health check, and then starts Vite with synchronized data.
+Open **http://localhost:5173**.
 
-To run only the frontend, use `npm run dev`. It attempts the local `/api` proxy and remains fully usable in browser-only demo mode when the API is unavailable.
+`dev:full` starts the Spring API, waits for `/actuator/health`, and then starts Vite with synchronized data.
 
-The initial workspace contains 24 donor profiles, 240 donation records, five campaigns, communications, and activity history. Connected mode persists core records in the API database and mirrors them to browser storage.
+### Frontend-only demo
 
-## Commands
-
-| Command | Purpose |
-| --- | --- |
-| `npm run dev` | Start the Vite development server only |
-| `npm run dev:full` | Start the Spring API and connected React workspace |
-| `npm run server:dev` | Start only the Spring Boot API |
-| `npm run server:test` | Run Spring integration tests through Maven Wrapper |
-| `npm run server:build` | Package the Spring Boot API |
-| `npm run type-check` | Run strict TypeScript checks |
-| `npm run lint` | Run ESLint with zero warnings allowed |
-| `npm test` | Run Vitest unit tests |
-| `npm run build` | Create the production bundle |
-| `npm run preview` | Preview the production bundle locally |
-| `npm audit` | Verify the dependency audit |
-
-## Environment
-
-```env
-# Use /api with the Vite development proxy or a same-origin production deployment.
-VITE_API_BASE_URL=/api
-
-VITE_ENVIRONMENT=production
-
-# Optional server-side assistant route. Do not put a model provider key in Vite env vars.
-VITE_ASSISTANT_ENDPOINT=/assistant/query
+```bash
+npm run dev
 ```
 
-### Secret safety
+The interface remains fully usable without the API. Changes persist in browser storage.
 
-Vite embeds every `VITE_*` value in the browser bundle. Never put database passwords, payment-provider secrets, private AI keys, signing secrets, or service credentials in this file. Keep those on a backend and have the backend authorize every request.
+## Useful commands
 
-## Application Structure
+| Command | What it does |
+| :--- | :--- |
+| `npm run dev` | Start Vite only |
+| `npm run dev:full` | Start Spring Boot and the connected React app |
+| `npm run server:dev` | Start only the API |
+| `npm run server:test` | Run API integration tests |
+| `npm run server:build` | Package the API |
+| `npm run type-check` | Run strict TypeScript checks |
+| `npm run lint` | Run ESLint with zero warnings allowed |
+| `npm test` | Run frontend unit tests |
+| `npm run build` | Create the optimized frontend bundle |
+| `npm audit` | Verify the npm dependency audit |
+
+## Project structure
 
 ```text
 src/
-├── components/
-│   ├── layout/          App shell, navigation, search, donation workflow
-│   └── ui/              Buttons, cards, badges, modal, forms, toasts
-├── data/                Deterministic, realistic demo records
-├── hooks/               Reusable data and analytics hooks
-├── lib/                 Analytics, calculations, formatting, exports
-├── pages/               Nine route-level application modules
-├── services/            Axios client and typed backend service modules
-├── store/               Persisted Zustand data and UI state
-├── types/               Domain interfaces
-├── App.tsx              Route definitions and lazy loading
-├── main.tsx              React entry point
-└── index.css             Tailwind layers, theme, glass UI, print rules
+├── components/           Application shell and reusable interface
+├── data/                 Realistic demonstration records
+├── hooks/                Domain, analytics, and synchronization hooks
+├── lib/                  Analytics, calculations, formatting, and exports
+├── pages/                Nine product modules
+├── services/             Typed frontend API clients
+├── store/                Persisted application and interface state
+└── types/                Shared TypeScript domain contracts
 
-server/                    Spring Boot 3.5 API
-├── controller/           Modern and legacy-compatible endpoints
-├── domain/               Donor, donation, and campaign JPA entities
-├── dto/                  Validated request/response records
+server/
+├── controller/           Modern and legacy-compatible REST endpoints
+├── domain/               JPA entities
+├── dto/                  Validated API records
 ├── repository/           Spring Data repositories
 ├── service/              Import, totals, synchronization, and legacy logic
-├── resources/            H2/PostgreSQL config and Flyway migrations
-└── src/test/             API integration tests
+└── resources/            Application configuration and Flyway migration
 
-scripts/                   Cross-platform full-stack and Maven commands
+docs/                     Deployment, integration, and reference guides
+scripts/                  Cross-platform development commands
 ```
 
-## Backend Integration
+## API integration
 
-The included `server/` module exposes:
+The Spring service exposes:
 
 - `GET /api/status` and `GET /api/bootstrap`
 - `POST /api/import` for idempotent client-ID upserts
@@ -117,69 +234,72 @@ The included `server/` module exposes:
 - `GET /api/legacy/reports`
 - `GET /actuator/health`
 
-The browser imports its current workspace, applies server totals, and then hydrates from the API. Donor, donation, and campaign forms write through when connected. A failed API call leaves the local record intact and marks the shell as offline.
+Development uses file-backed H2 at `server/data/kindred.mv.db`. PostgreSQL can be enabled with the `postgres` profile and standard Spring datasource variables.
 
-Development uses a file-backed H2 database at `server/data/kindred.mv.db`. Set the `postgres` profile and database variables for PostgreSQL. See [`server/README.md`](server/README.md) and [`docs/LEGACY_INTEGRATION.md`](docs/LEGACY_INTEGRATION.md).
+See:
 
-The Axios client also supports a bearer token from `localStorage` under `kindred-session`. In production, prefer secure, `HttpOnly`, `SameSite` cookies and enforce authorization in an authenticated gateway.
+- [`server/README.md`](server/README.md)
+- [`docs/LEGACY_INTEGRATION.md`](docs/LEGACY_INTEGRATION.md)
+- [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)
+- [`SECURITY.md`](SECURITY.md)
 
-### Assistant endpoint contract
+## Netlify deployment
 
-`VITE_ASSISTANT_ENDPOINT` may point to a backend route with this request:
+The frontend is live at:
 
-```json
-{
-  "question": "Which campaign is leading?"
-}
+### **[https://eloquent-puppy-38d03f.netlify.app](https://eloquent-puppy-38d03f.netlify.app)**
+
+Netlify configuration included in the repository:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- SPA fallback through `public/_redirects`
+- Production chunks for React, charts, and application routes
+
+A full production deployment should host the Spring API separately and set:
+
+```env
+VITE_API_BASE_URL=https://api.example.org
 ```
 
-Expected response:
+Never place database, payment, email, signing, or private AI credentials in a `VITE_*` variable—those values are public in the browser bundle.
 
-```json
-{
-  "answer": "A Home for Every Family is leading…",
-  "suggestions": ["Compare all campaigns", "Show donor retention"],
-  "source": "api"
-}
-```
-
-If the endpoint is absent, the assistant calculates deterministic answers in the browser. If it fails, the app falls back safely to the local engine.
-
-## Deployment
-
-```bash
-npm ci
-npm run build
-```
-
-The output directory is `dist/`. Configure your host to rewrite unknown application routes to `/index.html` so `BrowserRouter` can handle direct links to `/donors`, `/analytics`, and other pages.
-
-Included deployment support:
-
-- `vercel.json`
-- `public/_redirects` for Netlify-compatible hosts
-- `.github/workflows/ci.yml` for type, lint, test, audit, and build verification
-
-See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for the deployment checklist and [`SECURITY.md`](SECURITY.md) for the security boundary.
-
-## Quality Verification
-
-The delivery has been verified with:
+## Quality status
 
 ```text
-npm run type-check   ✓
-npm run lint         ✓
-npm test             ✓ (4 frontend unit tests)
-npm run build        ✓
-npm run server:test  ✓ (3 API integration tests)
-npm run server:build ✓
-npm audit            ✓ (0 vulnerabilities)
+TypeScript ............... passed
+ESLint ................... passed
+Frontend unit tests ....... 4 passed
+Production frontend build  passed
+Spring API tests .......... 3 passed
+Spring production build ... passed
+npm dependency audit ...... 0 known vulnerabilities
 ```
 
-## Data Reset
+## Contributing
 
-Open **Settings → Security & data → Reset demo** to restore the browser workspace. For a complete server reset during local development, stop the API and remove `server/data/`. Export a backup first if changes matter.
+Contributions are welcome. Please keep changes focused, tested, accessible, and secure.
+
+1. Fork the repository
+2. Create a feature branch
+3. Run frontend and backend checks
+4. Open a pull request with a clear summary
+
+## Upstream project
+
+Kindred preserves and expands the original donor, category-based donation, and total-report workflows from the individual Java project integrated at:
+
+**[812021664/Non-Profit-organization](https://github.com/812021664/Non-Profit-organization)**
+
+Migration details are documented in [`docs/LEGACY_INTEGRATION.md`](docs/LEGACY_INTEGRATION.md) and attribution in [`UPSTREAM.md`](UPSTREAM.md).
 
 ## License
 
-Use this project according to your organization’s policies and the license selected by its owner.
+No open-source license has been declared by the repository owner. Add an appropriate license before public redistribution.
+
+---
+
+<div align="center">
+  <strong>Built for teams who believe every gift can become something lasting.</strong><br><br>
+  <a href="https://eloquent-puppy-38d03f.netlify.app">Explore Kindred</a> · <a href="https://github.com/812021664/Non-Profit-organization">Star on GitHub</a>
+</div>
