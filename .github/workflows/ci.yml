@@ -1,0 +1,40 @@
+name: Quality and build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+          cache: maven
+      - run: npm ci
+      - run: npm run type-check
+      - run: npm run lint
+      - run: npm test
+      - run: npm audit --audit-level=moderate
+      - run: npm run build
+      - name: Test Spring API
+        working-directory: server
+        run: |
+          chmod +x mvnw
+          ./mvnw --batch-mode verify
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kindred-api
+          path: server/target/kindred-nonprofit-api-*.jar
+          if-no-files-found: error

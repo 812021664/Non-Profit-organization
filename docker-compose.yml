@@ -1,0 +1,36 @@
+services:
+  database:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: kindred
+      POSTGRES_USER: kindred
+      POSTGRES_PASSWORD: kindred-development-only
+    volumes:
+      - kindred-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kindred -d kindred"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: ./server
+    environment:
+      PORT: 8080
+      SPRING_PROFILES_ACTIVE: postgres
+      SPRING_DATASOURCE_URL: jdbc:postgresql://database:5432/kindred
+      SPRING_DATASOURCE_USERNAME: kindred
+      SPRING_DATASOURCE_PASSWORD: kindred-development-only
+      APP_ALLOWED_ORIGINS: http://localhost:5173,http://127.0.0.1:5173
+    ports:
+      - "8080:8080"
+    depends_on:
+      database:
+        condition: service_healthy
+    volumes:
+      - kindred-api-data:/app/data
+
+volumes:
+  kindred-postgres:
+  kindred-api-data:
